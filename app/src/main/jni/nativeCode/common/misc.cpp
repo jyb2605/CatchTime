@@ -111,3 +111,21 @@ void DrawShiftedCorners(cv::Mat image, cv::Mat homography){
     cv::line(image, sceneCorners[3], sceneCorners[0], cv::Scalar(255), 4 );
     cv::line(image, sceneCorners[2], sceneCorners[3], cv::Scalar(255), 4 );
 }
+
+/**
+ * draw message
+ */
+void DrawMessage(cv::Mat image){
+//    std::string modelDirectoryName = GetDirectoryName("/data/user/0/com.anandmuralidhar.simplearandroid/files/");
+//    std::string textureFullPath = modelDirectoryName + "/" + "message_01.png";
+//    MyLOGE("textureFullPath %s : ", textureFullPath.c_str());
+//    cv::Mat message = cv::imread(textureFullPath);
+////    cv::waitKey(0);
+//
+//    if (message.empty()) {
+//        MyLOGE("DrawMessage : FAIL");
+//        return;
+//    }
+//    MyLOGE("DrawMessage : SUCCESS");
+//    cv::imshow("message_01", message);
+}

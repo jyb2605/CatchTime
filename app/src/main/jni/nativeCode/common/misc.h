@@ -35,4 +35,6 @@ std::vector<cv::Point2f> Keypoint2Point(std::vector<cv::KeyPoint> keypoints);
 
 void DrawShiftedCorners(cv::Mat image, cv::Mat homography);
 
+void DrawMessage(cv::Mat image);
+
 #endif //MISC_H

@@ -20,6 +20,7 @@ import android.app.Activity;
 import android.support.v4.view.GestureDetectorCompat;
 import android.view.GestureDetector;
 import android.view.MotionEvent;
+import android.view.View;
 
 public class GestureClass {
 
@@ -36,6 +37,11 @@ public class GestureClass {
     class MyTapListener extends GestureDetector.SimpleOnGestureListener {
 
         public boolean onDoubleTap (MotionEvent event) {
+            SimpleARActivity.messageView.startAnimation(SimpleARActivity.animTransfadeout);
+            SimpleARActivity.messageView.setVisibility(View.VISIBLE);
+
+            SimpleARActivity.mNotificationManager.notify(1, SimpleARActivity.builder.build());
+
             DoubleTapNative();
             return true;
         }
