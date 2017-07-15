@@ -9,6 +9,6 @@ public class BingoActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.Bingo_activity);
+        setContentView(R.layout.bingo_activity);
     }
 }

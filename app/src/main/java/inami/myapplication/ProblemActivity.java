@@ -12,7 +12,7 @@ public class ProblemActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.Problem_activity);
+        setContentView(R.layout.problem_activity);
         EditText et = (EditText) findViewById(R.id.problem);
         int color= Color.parseColor("#a662ee");
         et.getBackground().setColorFilter(color, PorterDuff.Mode.SRC_IN);

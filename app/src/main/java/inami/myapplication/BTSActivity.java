@@ -9,6 +9,6 @@ public class BTSActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.BTS_activity);
+        setContentView(R.layout.bts_activity);
     }
 }
