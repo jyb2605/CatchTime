@@ -17,10 +17,13 @@
 package com.anandmuralidhar.simplearandroid;
 
 import android.app.Activity;
+import android.support.v4.content.ContextCompat;
 import android.support.v4.view.GestureDetectorCompat;
 import android.view.GestureDetector;
 import android.view.MotionEvent;
 import android.view.View;
+
+import inami.myapplication.BingoActivity;
 
 public class GestureClass {
 

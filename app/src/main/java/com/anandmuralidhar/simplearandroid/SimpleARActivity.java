@@ -26,6 +26,7 @@ import android.content.res.AssetManager;
 import android.opengl.GLSurfaceView;
 import android.os.Build;
 import android.os.Bundle;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.NotificationCompat;
 import android.view.Gravity;
 import android.view.MotionEvent;
@@ -34,6 +35,8 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
+
+import inami.myapplication.BingoActivity;
 
 
 public class SimpleARActivity extends Activity{
@@ -147,7 +150,7 @@ public class SimpleARActivity extends Activity{
         createNotification();
         mNotificationManager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
 
-
+        BingoActivity.bingo6.setBackgroundDrawable(ContextCompat.getDrawable(SimpleARActivity.this,R.drawable.icon_orange06));
 
     }
 
@@ -158,10 +161,10 @@ public class SimpleARActivity extends Activity{
      */
     NotificationCompat.Builder createNotification(){
         builder = (NotificationCompat.Builder) new NotificationCompat.Builder(this)
-                .setSmallIcon(R.mipmap.ic_launcher)
+                .setSmallIcon(R.drawable.logo)
                 .setContentTitle("CatchTime!")
-                .setContentText("퀘스트를 완료했습니다.")
-                .setSmallIcon(R.mipmap.ic_launcher/*스와이프 전 아이콘*/)
+                .setContentText("빙고를 완성하였습니다!")
+                .setSmallIcon(R.drawable.logo)
                 .setAutoCancel(true)
                 .setWhen(System.currentTimeMillis())
                 .setDefaults(Notification.DEFAULT_ALL);

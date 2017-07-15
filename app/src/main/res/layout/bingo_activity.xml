@@ -11,11 +11,10 @@
         android:id="@+id/bingo1"
         android:layout_width="78sp"
         android:layout_height="104sp"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginStart="56dp"
-        android:layout_marginTop="250dp"
-        android:background="@drawable/icon___09"/>
+        android:layout_marginStart="59dp"
+        android:background="@drawable/icon___09"
+        android:layout_centerVertical="true"
+        android:layout_alignParentStart="true" />
 
     <Button
         android:id="@+id/bingo2"

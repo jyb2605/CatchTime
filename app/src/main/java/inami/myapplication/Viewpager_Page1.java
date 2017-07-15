@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import com.anandmuralidhar.simplearandroid.R;
 
@@ -21,8 +22,9 @@ public class Viewpager_Page1 extends android.support.v4.app.Fragment {
         LinearLayout linearLayout = (LinearLayout)inflater.inflate(R.layout.viewpager_child,container,false);
 
         ImageView tutorial = (ImageView) linearLayout.findViewById(R.id.img_tutorial);
-//        tutorial.setImageResource(R.drawable.tu1);
-
+        TextView text = (TextView) linearLayout.findViewById(R.id.textView);
+        tutorial.setImageResource(R.drawable.ticket_01);
+        text.setText("방탄소년단 콘서트\n2017.07.15");
         return linearLayout;
     }
 }

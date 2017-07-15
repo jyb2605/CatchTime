@@ -25,7 +25,7 @@ public class SearchActivity extends AppCompatActivity {
                 new ImageButton.OnClickListener() {
                     public void onClick(View v) {
 
-                        dialog = ProgressDialog.show(SearchActivity.this, "", "로딩중 입니다.", true);
+                        dialog = ProgressDialog.show(SearchActivity.this, "", "검색 중 입니다.", true);
                         dialog.show();
 
 

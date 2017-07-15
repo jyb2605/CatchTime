@@ -1,28 +1,25 @@
 package inami.myapplication;
 
 import android.content.Intent;
-import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
-import android.widget.ImageButton;
-import android.widget.ImageView;
 
 import com.anandmuralidhar.simplearandroid.R;
 import com.anandmuralidhar.simplearandroid.SimpleARActivity;
 
 public class BingoActivity extends AppCompatActivity {
-    Button bingo1;
-    Button bingo2;
-    Button bingo3;
-    Button bingo4;
-    Button bingo5;
-    Button bingo6;
-    Button bingo7;
-    Button bingo8;
-    Button bingo9;
+    static Button bingo1;
+    static Button bingo2;
+    static Button bingo3;
+    static Button bingo4;
+    static Button bingo5;
+    public static Button bingo6;
+    static Button bingo7;
+    static Button bingo8;
+    static Button bingo9;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,7 +30,7 @@ public class BingoActivity extends AppCompatActivity {
         bingo1.setOnClickListener(
                 new Button.OnClickListener() {
                     public void onClick(View v) {
-                        bingo1.setBackgroundDrawable(ContextCompat.getDrawable(BingoActivity.this,R.drawable.icon_orange09));
+
                         Intent intent1 = new Intent(BingoActivity.this,ProblemActivity.class);
                         startActivity(intent1);
                     }
@@ -93,8 +90,8 @@ public class BingoActivity extends AppCompatActivity {
         bingo6.setOnClickListener(
                 new Button.OnClickListener() {
                     public void onClick(View v) {
-                        bingo6.setBackgroundDrawable(ContextCompat.getDrawable(BingoActivity.this,R.drawable.icon_orange06));
-                        Intent intent1 = new Intent(BingoActivity.this,SimpleARActivity.class);
+
+                        Intent intent1 = new Intent(BingoActivity.this, SimpleARActivity.class);
                         startActivity(intent1);
                     }
                 }
@@ -129,8 +126,8 @@ public class BingoActivity extends AppCompatActivity {
         bingo9.setOnClickListener(
                 new Button.OnClickListener() {
                     public void onClick(View v) {
-                        bingo9.setBackgroundDrawable(ContextCompat.getDrawable(BingoActivity.this,R.drawable.icon_orange07));
-                        Intent intent1 = new Intent(BingoActivity.this,ProblemActivity.class);
+
+                        Intent intent1 = new Intent(BingoActivity.this,BodyActivity.class);
                         startActivity(intent1);
                     }
                 }
