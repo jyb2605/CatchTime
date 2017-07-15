@@ -45,6 +45,7 @@
         <activity android:name="inami.myapplication.ProblemActivity"></activity>
         <activity android:name="inami.myapplication.BTSActivity"></activity>
         <activity android:name="inami.myapplication.BingoActivity"></activity>
+        <activity android:name="inami.myapplication.BodyActivity"></activity>
     </application>
 
 </manifest>
