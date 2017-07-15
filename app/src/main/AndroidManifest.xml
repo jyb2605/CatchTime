@@ -15,20 +15,25 @@
         android:label="CatchTime"
         android:supportsRtl="true"
         android:largeHeap="true"
-        android:theme="@style/AppTheme">
-        <activity android:name="inami.myapplication.SplashActivity"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+
+
+        <activity android:name="inami.myapplication.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <activity android:name="inami.myapplication.MainActivity"></activity>
         <activity android:name=".SimpleARActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:screenOrientation="landscape"
             />
-
+        <activity android:name="inami.myapplication.SearchActivity"></activity>
+        <activity android:name="inami.myapplication.ProblemActivity"></activity>
+        <activity android:name="inami.myapplication.BTSActivity"></activity>
+        <activity android:name="inami.myapplication.BingoActivity"></activity>
     </application>
 
 </manifest>

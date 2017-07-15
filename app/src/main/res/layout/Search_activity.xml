@@ -15,7 +15,7 @@
         android:ems="10"
         android:layout_marginTop="130dp"
         android:inputType="textPersonName"
-        android:text="티켓 번호를 입력해주세요."
+        android:hint="티켓 번호를 입력해주세요."
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true" />
 
