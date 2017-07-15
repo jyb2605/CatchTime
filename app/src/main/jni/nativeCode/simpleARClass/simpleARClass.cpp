@@ -85,8 +85,8 @@ void SimpleARClass::PerformGLInits() {
     // its a long list since ourWorld.obj has 6 textures corresponding to faces of the cube
     std::string objFilename, mtlFilename, texFilename;
     bool isFilesPresent  =
-            gHelperObject->ExtractAssetReturnFilename("amenemhat/c.obj", objFilename) &&
-            gHelperObject->ExtractAssetReturnFilename("amenemhat/c.mtl", mtlFilename) ;
+            gHelperObject->ExtractAssetReturnFilename("amenemhat/a.obj", objFilename) &&
+            gHelperObject->ExtractAssetReturnFilename("amenemhat/a.mtl", mtlFilename) ;
     if( !isFilesPresent ) {
         MyLOGE("Model %s does not exist!", objFilename.c_str());
         return;
