@@ -50,6 +50,8 @@ public class SearchActivity extends AppCompatActivity {
             dialog.dismiss();
             Intent intent=new Intent(SearchActivity.this,BTSActivity.class);
             startActivity(intent);
+            overridePendingTransition(R.anim.fadein, R.anim.fadeout);
+
 //            startActivity(intent);
         }
     };
