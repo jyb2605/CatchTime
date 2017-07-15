@@ -7,4 +7,89 @@
     android:background="@drawable/bingo_back"
     tools:context="inami.myapplication.MainActivity">
 
+    <Button
+        android:id="@+id/bingo1"
+        android:layout_width="78sp"
+        android:layout_height="104sp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="220dp"
+        android:background="@drawable/icon___09"/>
+
+    <Button
+        android:id="@+id/bingo2"
+        android:layout_width="78sp"
+        android:layout_height="104sp"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/bingo1"
+        android:layout_alignStart="@+id/bingo1"
+        android:background="@drawable/icon___02" />
+
+    <Button
+        android:id="@+id/bingo3"
+        android:layout_width="78sp"
+        android:layout_height="104sp"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/bingo2"
+        android:layout_alignStart="@+id/bingo2"
+        android:background="@drawable/icon___03" />
+
+    <Button
+        android:id="@+id/bingo4"
+        android:layout_width="78sp"
+        android:layout_height="104sp"
+        android:layout_alignTop="@+id/bingo1"
+        android:layout_marginLeft="15dp"
+        android:layout_toEndOf="@+id/bingo1"
+        android:background="@drawable/icon___04" />
+
+    <Button
+        android:id="@+id/bingo5"
+        android:layout_width="78sp"
+        android:layout_height="104sp"
+        android:layout_marginLeft="15dp"
+        android:layout_alignTop="@+id/bingo4"
+        android:layout_toEndOf="@+id/bingo4"
+        android:background="@drawable/icon___05" />
+
+    <Button
+        android:id="@+id/bingo6"
+        android:layout_width="78sp"
+        android:layout_height="104sp"
+        android:layout_alignTop="@+id/bingo2"
+        android:layout_below="@+id/bingo4"
+        android:layout_marginLeft="15dp"
+        android:layout_toEndOf="@+id/bingo2"
+        android:background="@drawable/icon___06" />
+
+    <Button
+        android:id="@+id/bingo7"
+        android:layout_width="78sp"
+        android:layout_height="104sp"
+        android:layout_below="@+id/bingo5"
+        android:layout_alignTop="@+id/bingo6"
+        android:layout_marginLeft="15dp"
+        android:layout_toEndOf="@+id/bingo6"
+        android:background="@drawable/icon___01" />
+
+    <Button
+        android:id="@+id/bingo8"
+        android:layout_width="78sp"
+        android:layout_height="104sp"
+        android:layout_below="@+id/bingo6"
+        android:layout_alignTop="@+id/bingo3"
+        android:layout_marginLeft="15dp"
+        android:layout_toEndOf="@+id/bingo3"
+        android:background="@drawable/icon___08" />
+
+    <Button
+        android:id="@+id/bingo9"
+        android:layout_width="78sp"
+        android:layout_height="104sp"
+        android:layout_below="@+id/bingo8"
+        android:layout_alignTop="@+id/bingo8"
+        android:layout_marginLeft="15dp"
+        android:layout_toEndOf="@+id/bingo8"
+        android:background="@drawable/icon___07" />
 </RelativeLayout>
