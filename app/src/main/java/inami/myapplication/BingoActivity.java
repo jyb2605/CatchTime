@@ -35,7 +35,7 @@ public class BingoActivity extends AppCompatActivity {
         findViewById(R.id.bingo2).setOnClickListener(
                 new Button.OnClickListener() {
                     public void onClick(View v) {
-                        Intent intent1 = new Intent(BingoActivity.this,ProblemActivity.class);
+                        Intent intent1 = new Intent(BingoActivity.this,BodyActivity.class);
                         startActivity(intent1);
                     }
                 }
