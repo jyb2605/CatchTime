@@ -18,13 +18,20 @@ package com.anandmuralidhar.simplearandroid;
 
 import android.app.Activity;
 import android.app.AlertDialog;
+import android.app.Notification;
+import android.app.NotificationManager;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.res.AssetManager;
 import android.opengl.GLSurfaceView;
+import android.os.Build;
 import android.os.Bundle;
+import android.support.v7.app.NotificationCompat;
 import android.view.Gravity;
 import android.view.MotionEvent;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 
@@ -38,8 +45,12 @@ public class SimpleARActivity extends Activity{
     private SensorClass mSensorObject;
     ImageView bingoView;
     ImageView buttonView;
+    static ImageView messageView;
+    static Animation animTransfadeout;
     FrameLayout frameLayout;
-
+    FrameLayout.LayoutParams layoutParams;
+    static NotificationCompat.Builder builder;
+    static NotificationManager mNotificationManager;
 
     private native void CreateObjectNative(AssetManager assetManager, String pathToInternalDir);
     private native void DeleteObjectNative();
@@ -93,10 +104,11 @@ public class SimpleARActivity extends Activity{
 
         buttonView = new ImageView(this);
         bingoView = new ImageView(this);
+        messageView = new ImageView(this);
 
 
         buttonView.setBackgroundResource(R.drawable.camera_02);
-        FrameLayout.LayoutParams layoutParams =new FrameLayout.LayoutParams(250, 250);
+        layoutParams =new FrameLayout.LayoutParams(250, 250);
         layoutParams.gravity = Gravity.END | Gravity.CENTER_VERTICAL;
         layoutParams.rightMargin = 50;
         buttonView.setLayoutParams(layoutParams);
@@ -110,7 +122,48 @@ public class SimpleARActivity extends Activity{
         frameLayout.addView(bingoView);
 
 
+        messageView.setBackgroundResource(R.drawable.message_01);
+        layoutParams =new FrameLayout.LayoutParams(600, 300);
+        layoutParams.gravity = Gravity.CENTER;
+        layoutParams.rightMargin=500;
+        layoutParams.bottomMargin=300;
+
+        messageView.setLayoutParams(layoutParams);
+        SimpleARActivity.messageView.setVisibility(View.INVISIBLE);
+        frameLayout.addView(messageView);
+
+        animTransfadeout = AnimationUtils.loadAnimation(SimpleARActivity.this, R.anim.fadein);
+
+
+        createNotification();
+        mNotificationManager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
+
+
+
     }
+
+
+    /**
+     * 노티피케이션 빌드
+     * @return
+     */
+    NotificationCompat.Builder createNotification(){
+        builder = (NotificationCompat.Builder) new NotificationCompat.Builder(this)
+                .setSmallIcon(R.mipmap.ic_launcher)
+                .setContentTitle("CatchTime!")
+                .setContentText("퀘스트를 완료했습니다.")
+                .setSmallIcon(R.mipmap.ic_launcher/*스와이프 전 아이콘*/)
+                .setAutoCancel(true)
+                .setWhen(System.currentTimeMillis())
+                .setDefaults(Notification.DEFAULT_ALL);
+        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP){
+            builder.setCategory(Notification.CATEGORY_MESSAGE)
+                    .setPriority(Notification.PRIORITY_HIGH)
+                    .setVisibility(Notification.VISIBILITY_PUBLIC);
+        }
+        return builder;
+    }
+
 
     @Override
     protected void onResume() {
