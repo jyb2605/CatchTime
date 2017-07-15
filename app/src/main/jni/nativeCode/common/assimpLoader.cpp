@@ -191,14 +191,13 @@ bool AssimpLoader::LoadTexturesToGL(std::string modelFilename) {
         // load the texture using OpenCV
         MyLOGI("Loading texture %s", textureFullPath.c_str());
         cv::Mat textureImage = cv::imread(textureFullPath);
-        if (!textureImage.empty()) {
 
+        if (!textureImage.empty()) {
             // opencv reads textures in BGR format, change to RGB for GL
             cv::cvtColor(textureImage, textureImage, CV_BGR2RGB);
             // opencv reads image from top-left, while GL expects it from bottom-left
             // vertically flip the image
             cv::flip(textureImage, textureImage, 0);
-
             // bind the texture
             glBindTexture(GL_TEXTURE_2D, textureGLNames[i]);
             // specify linear filtering
@@ -212,6 +211,8 @@ bool AssimpLoader::LoadTexturesToGL(std::string modelFilename) {
 
         } else {
 
+//            textureIterator = textureNameMap.begin();
+//            continue;
             MyLOGE("Couldn't load texture %s", textureFilename.c_str());
 
             //Cleanup and return

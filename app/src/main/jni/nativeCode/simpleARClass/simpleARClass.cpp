@@ -83,10 +83,14 @@ void SimpleARClass::PerformGLInits() {
 
     // extract the OBJ and companion files from assets
     // its a long list since ourWorld.obj has 6 textures corresponding to faces of the cube
-    std::string objFilename, mtlFilename, texFilename;
+    std::string objFilename, mtlFilename, texFilename1, texFilename2, texFilename3;
     bool isFilesPresent  =
             gHelperObject->ExtractAssetReturnFilename("amenemhat/a.obj", objFilename) &&
-            gHelperObject->ExtractAssetReturnFilename("amenemhat/a.mtl", mtlFilename) ;
+            gHelperObject->ExtractAssetReturnFilename("amenemhat/a.mtl", mtlFilename) &&
+            gHelperObject->ExtractAssetReturnFilename("amenemhat/body.png", texFilename1) &&
+            gHelperObject->ExtractAssetReturnFilename("amenemhat/eyes.png", texFilename2) &&
+            gHelperObject->ExtractAssetReturnFilename("amenemhat/face.png", texFilename3);
+
     if( !isFilesPresent ) {
         MyLOGE("Model %s does not exist!", objFilename.c_str());
         return;
@@ -335,6 +339,22 @@ bool SimpleARClass::DetectKeypointsInReferenceImage() {
         }
     }
     MyLOGD("Number of kps whose descriptors match = %d", (int) sourceMatches.size());
+
+    unsigned i;
+    for (i = 0; i < referenceKeypoints.size(); i++) {
+
+
+        MyLOGD("%f", referenceKeypoints[i].pt.x);
+        MyLOGD("%f", referenceKeypoints[i].pt.y);
+        MyLOGD("%f", referenceKeypoints[i].angle);
+        MyLOGD("%d",referenceKeypoints[i].class_id);
+        MyLOGD("%d", referenceKeypoints[i].octave);
+        MyLOGD("%f",referenceKeypoints[i].response);
+        MyLOGD("%f", referenceKeypoints[i].size);
+
+
+    }
+    MyLOGD("i : %d", i);
 
     // compute homography to further prune outlier keypoints
     cv::Mat homography, inlierMask;

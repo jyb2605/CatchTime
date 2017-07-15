@@ -12,8 +12,8 @@ newmtl DI_PC_CHR_ELS_F
 	Kd 0.6400 0.6400 0.6400
 	Ks 0.0000 0.0000 0.0000
 	Ke 0.0000 0.0000 0.0000
-	map_Ka DI_PC_CHARACTER_Elsa_Face_D.png
-	map_Kd DI_PC_CHARACTER_Elsa_Face_D.png
+	map_Ka face.png
+	map_Kd face.png
 
 newmtl DI_PC_CHR_ELS_E
 	Ns 96.0784
@@ -26,8 +26,8 @@ newmtl DI_PC_CHR_ELS_E
 	Kd 0.6400 0.6400 0.6400
 	Ks 0.0000 0.0000 0.0000
 	Ke 0.0000 0.0000 0.0000
-	map_Ka DI_PC_CHARACTER_Elsa_Eyes_D.png
-	map_Kd DI_PC_CHARACTER_Elsa_Eyes_D.png
+	map_Ka eyes.png
+	map_Kd eyes.png
 
 newmtl DI_PC_CHR_ELS_B
 	Ns 96.0784
@@ -40,5 +40,5 @@ newmtl DI_PC_CHR_ELS_B
 	Kd 0.6400 0.6400 0.6400
 	Ks 0.0000 0.0000 0.0000
 	Ke 0.0000 0.0000 0.0000
-	map_Ka DI_PC_CHARACTER_Elsa_Body_D.png
-	map_Kd DI_PC_CHARACTER_Elsa_Body_D.png
+	map_Ka body.png
+	map_Kd body.png

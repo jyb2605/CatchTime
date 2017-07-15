@@ -54,7 +54,7 @@ private:
 
     cv::Ptr<cv::DescriptorMatcher> matcher;
     cv::Mat referenceDescriptors;
-    std::vector<cv::KeyPoint> referenceKeypoints;
+    std::vector<cv::KeyPoint>   referenceKeypoints;
 
     bool    initsDone;
     int     screenWidth, screenHeight;
