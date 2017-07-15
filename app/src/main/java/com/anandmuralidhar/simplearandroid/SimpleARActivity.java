@@ -22,8 +22,11 @@ import android.content.DialogInterface;
 import android.content.res.AssetManager;
 import android.opengl.GLSurfaceView;
 import android.os.Bundle;
+import android.view.Gravity;
 import android.view.MotionEvent;
 import android.view.View;
+import android.widget.FrameLayout;
+import android.widget.ImageView;
 
 
 public class SimpleARActivity extends Activity{
@@ -33,6 +36,10 @@ public class SimpleARActivity extends Activity{
     private boolean appIsExiting=false;
     private GestureClass mGestureObject;
     private SensorClass mSensorObject;
+    ImageView bingoView;
+    ImageView buttonView;
+    FrameLayout frameLayout;
+
 
     private native void CreateObjectNative(AssetManager assetManager, String pathToInternalDir);
     private native void DeleteObjectNative();
@@ -57,8 +64,13 @@ public class SimpleARActivity extends Activity{
                 mCameraObject.GetFOV());
 
         // layout has only two components, a GLSurfaceView and a TextView
+
         setContentView(R.layout.simplear_layout);
+
         mGLView = (MyGLSurfaceView) findViewById (R.id.gl_surface_view);
+//        buttonView = (ImageView) findViewById(R.id.button);
+//        bingoView = (ImageView) findViewById(R.id.bingo);
+        frameLayout = (FrameLayout) findViewById(R.id.frame_layout);
 
         // mGestureObject will handle touch gestures on the screen
         mGestureObject = new GestureClass(this);
@@ -70,11 +82,33 @@ public class SimpleARActivity extends Activity{
             }
         });
 
+
+
+
         mSensorObject = new SensorClass(this, mGLView);
         if(!mSensorObject.isSensorsAvailable()) {
             ShowExitDialog(this, getResources().getString(R.string.exit_no_sensor));
             appIsExiting=true;
         }
+
+        buttonView = new ImageView(this);
+        bingoView = new ImageView(this);
+
+
+        buttonView.setBackgroundResource(R.drawable.camera_02);
+        FrameLayout.LayoutParams layoutParams =new FrameLayout.LayoutParams(250, 250);
+        layoutParams.gravity = Gravity.END | Gravity.CENTER_VERTICAL;
+        layoutParams.rightMargin = 50;
+        buttonView.setLayoutParams(layoutParams);
+        frameLayout.addView(buttonView);
+
+        bingoView.setBackgroundResource(R.drawable.camera_01);
+        layoutParams =new FrameLayout.LayoutParams(600, 300);
+        layoutParams.gravity = Gravity.END;
+//        layoutParams.rightMargin = 50;
+        bingoView.setLayoutParams(layoutParams);
+        frameLayout.addView(bingoView);
+
 
     }
 
