@@ -22,7 +22,8 @@
         android:id="@+id/button"
         android:layout_width="match_parent"
         android:layout_height="50sp"
+        android:background="@drawable/done_selector"
         android:layout_alignParentBottom="true"
-        android:layout_alignParentStart="true"
-        android:background="@drawable/problem_btn" />
+        android:layout_alignParentStart="true" />
+
 </RelativeLayout>
