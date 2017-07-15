@@ -4,7 +4,7 @@
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/problem_back"
+    android:background="@drawable/body_quiz"
     tools:context="inami.myapplication.MainActivity">
 
     <EditText
