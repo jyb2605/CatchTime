@@ -11,6 +11,5 @@ public class BingoActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.bingo_activity);
 
-
     }
 }

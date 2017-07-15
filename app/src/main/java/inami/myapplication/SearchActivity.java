@@ -15,6 +15,7 @@ public class SearchActivity extends AppCompatActivity {
         setContentView(R.layout.search_activity);
 
 
+
         findViewById(R.id.button3).setOnClickListener(
                 new ImageButton.OnClickListener() {
                     public void onClick(View v) {
@@ -23,5 +24,6 @@ public class SearchActivity extends AppCompatActivity {
                     }
                 }
         );
+
     }
 }
