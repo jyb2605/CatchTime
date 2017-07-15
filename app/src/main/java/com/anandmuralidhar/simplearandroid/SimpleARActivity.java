@@ -112,7 +112,16 @@ public class SimpleARActivity extends Activity{
         layoutParams.gravity = Gravity.END | Gravity.CENTER_VERTICAL;
         layoutParams.rightMargin = 50;
         buttonView.setLayoutParams(layoutParams);
+
+        buttonView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                SimpleARActivity.mNotificationManager.notify(1, SimpleARActivity.builder.build());
+                finish();
+            }
+        });
         frameLayout.addView(buttonView);
+
 
         bingoView.setBackgroundResource(R.drawable.camera_01);
         layoutParams =new FrameLayout.LayoutParams(600, 300);

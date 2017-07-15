@@ -40,7 +40,7 @@ public class GestureClass {
             SimpleARActivity.messageView.startAnimation(SimpleARActivity.animTransfadeout);
             SimpleARActivity.messageView.setVisibility(View.VISIBLE);
 
-            SimpleARActivity.mNotificationManager.notify(1, SimpleARActivity.builder.build());
+
 
             DoubleTapNative();
             return true;
