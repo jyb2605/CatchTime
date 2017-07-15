@@ -225,7 +225,7 @@ void SimpleARClass::ProcessCameraImage(cv::Mat cameraRGBImage) {
     } else {
 
         // simply highlight corners in the image
-        DetectAndHighlightCorners();
+//        DetectAndHighlightCorners();
 
     }
 
@@ -390,7 +390,7 @@ bool SimpleARClass::DetectKeypointsInReferenceImage() {
     MyLOGD("Success, Number of keypoint matches = %d", (int)sourceInlierKeypoints.size());
 
     // draw a rectangle marking reference frame in current image
-    DrawShiftedCorners(cameraImageForBack, homography);
+//    DrawShiftedCorners(cameraImageForBack, homography);
     return true;
 }
 

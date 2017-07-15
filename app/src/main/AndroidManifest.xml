@@ -24,6 +24,10 @@
             </intent-filter>
         </activity>
         <activity android:name="inami.myapplication.MainActivity"></activity>
+        <activity android:name=".SimpleARActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="landscape"
+            />
     </application>
 
 </manifest>
