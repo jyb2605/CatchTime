@@ -1,0 +1,12 @@
+diff a/app/src/main/AndroidManifest.xml b/app/src/main/AndroidManifest.xml	(rejected hunks)
+@@ -24,6 +24,10 @@
+             </intent-filter>
+         </activity>
+         <activity android:name="inami.myapplication.MainActivity"></activity>
++        <activity android:name=".SimpleARActivity"
++            android:configChanges="orientation|keyboardHidden|screenSize"
++            android:screenOrientation="landscape"
++            />
+     </application>
+ 
+ </manifest>
