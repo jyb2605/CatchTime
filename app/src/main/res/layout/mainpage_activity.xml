@@ -58,15 +58,6 @@
 
         </LinearLayout>
 
-        <ImageButton
-            android:id="@+id/skipbtn"
-            android:layout_width="match_parent"
-            android:layout_height="50sp"
-            android:layout_marginBottom="15sp"
-            android:layout_marginLeft="45sp"
-            android:layout_marginRight="45sp"
-            android:layout_marginTop="15sp"
-            android:background="@drawable/page1_icon_09" />
     </LinearLayout>
 
 </FrameLayout>
