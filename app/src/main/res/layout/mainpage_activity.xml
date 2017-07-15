@@ -21,7 +21,7 @@
             android:layout_height="250dp"
             android:layout_marginLeft="20sp"
             android:layout_marginRight="20sp"
-            android:layout_marginTop="200sp"
+            android:layout_marginTop="280sp"
             android:background="@drawable/rounded"
             android:orientation="vertical">
 
@@ -33,7 +33,7 @@
                 android:layout_marginLeft="30sp"
                 android:layout_marginRight="30sp"
                 android:layout_marginTop="30sp"
-                android:background="@drawable/page1_icon_03" />
+                android:background="@drawable/naver_selector" />
 
             <ImageButton
                 android:id="@+id/logbtn2"
@@ -58,15 +58,6 @@
 
         </LinearLayout>
 
-        <ImageButton
-            android:id="@+id/skipbtn"
-            android:layout_width="match_parent"
-            android:layout_height="50sp"
-            android:layout_marginBottom="15sp"
-            android:layout_marginLeft="45sp"
-            android:layout_marginRight="45sp"
-            android:layout_marginTop="15sp"
-            android:background="@drawable/page1_icon_09" />
     </LinearLayout>
 
 </FrameLayout>

@@ -47,13 +47,6 @@ public class MainActivity extends AppCompatActivity {
                 }
         );
 
-        findViewById(R.id.skipbtn).setOnClickListener(
-                new ImageButton.OnClickListener() {
-                    public void onClick(View v) {
-                        Intent intent1 = new Intent(MainActivity.this,SearchActivity.class);
-                        startActivity(intent1);
-                    }
-                }
-        );
+
     }
 }
